@@ -29,4 +29,4 @@ frames.w /=  orig_width
 frames.y1 /= orig_height
 frames.h /=  orig_height
 
-frames.to_csv('./frame_data/test_' + title + '.csv', index=False)
+frames.to_csv('./frame_data/' + title + '.csv', index=False)
