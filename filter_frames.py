@@ -23,7 +23,7 @@ def filter_frames(data, class_id):
     result = data.loc[data['class_id'] == class_id].loc[data.groupby(['frame'])['conf'].idxmax()].reset_index(drop=True)
     return result
 
-filtered_df = filter_frames(unfiltered_df, class_id_input).drop(['clip', 'class_id', 'conf'], axis=1).dropna(how='all')
+filtered_df = filter_frames(unfiltered_df, class_id_input).drop(['class_id', 'conf'], axis=1).dropna(how='all')
 
 # print(str(type(filtered_df)))
 # save to new csv
