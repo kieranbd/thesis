@@ -60,8 +60,8 @@ while True:
         cv2.rectangle(frame, (int(startX), int(startY)), (int(endX), int(endY)), (0,255,0), 2)
 
     # show the output frame
-    frame = cv2.resize(frame, (RESIZE_WIDTH,RESIZE_HEIGHT))
-    cv2.imshow("Frame", frame)
+    display_frame = cv2.resize(frame, (RESIZE_WIDTH,RESIZE_HEIGHT))
+    cv2.imshow("Frame", display_frame)
     key = cv2.waitKey(60) & 0xFF
 
     if key == ord('q'): # manual quit
@@ -72,7 +72,7 @@ while True:
         if key == ord('n'): # right arrow -> next frame
             continue
         else: # draw bb
-            drawn_bb = cv2.selectROI("Frame", frame, fromCenter=False, showCrosshair=True) # dims of bb drawn by observer
+            drawn_bb = cv2.selectROI("Frame", display_frame, fromCenter=False, showCrosshair=True) # dims of bb drawn by observer
             temp_dict = {
                 'frame': frame_count,
                 'x1': drawn_bb[0]/RESIZE_WIDTH,
