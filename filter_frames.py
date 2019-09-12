@@ -21,10 +21,11 @@ def filter_frames(data, class_id):
     # we include reset_index to ensure the indexes from original df are not used
     # drop=True param ensures index column is not included in result
     result = data.loc[data['class_id'] == class_id].loc[data.groupby(['frame'])['conf'].idxmax()].reset_index(drop=True)
+    result = result.drop(['class_id', 'conf'], axis=1).dropna(how='all')
     return result
 
-filtered_df = filter_frames(unfiltered_df, class_id_input).drop(['class_id', 'conf'], axis=1).dropna(how='all')
+filtered_df = filter_frames(unfiltered_df, class_id_input)
 
 # print(str(type(filtered_df)))
 # save to new csv
-filtered_df.to_csv('./frame_data/' + csv_name, index=False)
+filtered_df.to_csv('./frame_data/' + csv_name + '_new', index=False)
