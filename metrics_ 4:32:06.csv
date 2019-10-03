@@ -1,0 +1,2 @@
+Clip,Res,Tracker,Duration,SOTP,SOTA,Recall,Precision,FPF,SODP,MT,ML,PT,FM,FPS
+Bike03,1280,medianflow,90.0,1028.5988,0.7639,0.4583,0.66,0.18888888888888888,0.0,0,0,1,0.24,63.92
