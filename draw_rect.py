@@ -62,7 +62,7 @@ while True:
 
     # show the output frame
     display_frame = cv2.resize(frame, (RESIZE_WIDTH,RESIZE_HEIGHT))
-    cv2.imshow("Frame", display_frame)
+    cv2.imshow(str(filename), display_frame)
     key = cv2.waitKey(60) & 0xFF
 
     if key == ord('q'): # manual quit
@@ -70,7 +70,7 @@ while True:
 
     if row is None: # ie no bb found, either needs bb, or no objects
         key = cv2.waitKey(1)
-        drawn_bb = cv2.selectROI("Frame", display_frame, fromCenter=False, showCrosshair=True) # dims of bb drawn by observer
+        drawn_bb = cv2.selectROI(str(filename), display_frame, fromCenter=False, showCrosshair=True) # dims of bb drawn by observer
         temp_dict = {
                         'frame': frame_count,
                         'x1': drawn_bb[0]/RESIZE_WIDTH,
