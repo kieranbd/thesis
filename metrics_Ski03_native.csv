@@ -1,0 +1,2 @@
+Clip,Res,Tracker,IOU_Thresh,Dist_Thresh,SOTP,SOTA,Recall,Precision,FPF,SODP,MT,PT,ML,Completeness,FM,FPS,fp_count,fp_thresh_count,tp_count,fn_count,tn_count,N_objects,N_frames,N_match
+Ski03,1920,goturn,0.4,0.1,0.0073,1.0,1.0,1.0,0.0,0.5091,1,0,0,0.83,0.0,13.8,0,0,1113,0,0,1113,1114,1113
