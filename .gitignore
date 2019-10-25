@@ -1,2 +1,7 @@
 /raw_clips
 /ground_truth_clips
+/output
+/re3-tensorflow
+goturn.caffemodel
+goturn.prototxt
+
